@@ -34,9 +34,10 @@ class inApp : AppCompatActivity(){
                 R.id.navigation_favoritos
             )
         )
+
+        supportActionBar?.hide();
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-//        (tabLayout.getTabAt(0).view as LinearLayout).visibility = View.GONE
-
     }
 }
