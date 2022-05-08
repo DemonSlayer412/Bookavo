@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Bookavo</string>
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Descubrir</string>
+    <string name="title_me">Perfil</string>
+    <string name="title_favoritos">Favoritos</string>
+
+    <!--  Home screen: Miguel  -->
+    <string name="home_title">Recomendaciones diarias</string>
+    <string name="home_book_1_name">Cosmos, una odisea en el espacio</string>
+    <string name="home_book_1_category">Novel</string>
+    <string name="home_book_1_description">continuación de Cosmos: un viaje personal, que fuera presentada por Carl Sagan</string>
+    <string name="home_book_1_title2">Recientemente leidos</string>
+    <string name="home_book_1_recent">Cosmos</string>
+    <string name="home_book_1_author">Neil deGrasse Tyson</string>
+    <string name="home_book_1_news">Nuevos</string>
+    <string name="home_book_1_talvez">Talvez podria gustarte</string>
+
+    <!-- Profile Screen: Miguel  -->
+    <string name="profile_title">Perfil</string>
+    <string name="profile_author">Usuario de prueba</string>
+    <string name="profile_job">Informacion del usuario</string>
+    <string name="profile_description">Firma del usuario</string>
+    <string name="social_media_description">Twitter del desarrollador de la app</string>
+
+</resources>
