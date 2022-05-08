@@ -10,171 +10,169 @@
         tools:context=".Home">
 
     <ScrollView
-        android:id="@+id/scroll_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+            android:id="@+id/scroll_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toStartOf="parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
 
             <TextView
-                android:id="@+id/title_recomendation"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="40dp"
-                android:text="@string/home_title"
-                android:textColor="@color/black_light"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/daily_list"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.49" />
+                    android:id="@+id/title_recomendation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="40dp"
+                    android:text="@string/home_title"
+                    android:textColor="@color/black_light"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/daily_list"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.49"/>
 
             <HorizontalScrollView
-                android:id="@+id/daily_list"
-                android:layout_width="match_parent"
-                android:layout_height="280dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="25dp"
-                tools:ignore="SpeakableTextPresentCheck">
+                    android:id="@+id/daily_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="25dp"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal">
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="280dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@color/white"
-                        android:backgroundTint="@color/white">
+                            android:layout_width="240dp"
+                            android:layout_height="280dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/rounded_style"
-                            android:backgroundTint="@color/black"
-                            android:orientation="vertical"
-                            android:padding="12sp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:background="@drawable/cosmos_book_image"
-                                android:backgroundTint="#99000000"
-                                android:backgroundTintMode="src_atop"
-                                android:orientation="vertical"
-                                android:paddingLeft="5dp"
-                                android:paddingTop="5dp"
-                                android:paddingRight="5dp">
-
-                                <TextView
-                                    android:id="@+id/category_3"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0"
-                                    android:background="#FF9800"
-                                    android:paddingLeft="5dp"
-                                    android:paddingTop="5dp"
-                                    android:paddingRight="5dp"
-                                    android:paddingBottom="5dp"
-                                    android:text="@string/home_book_1_category" />
-
-                                <TextView
-                                    android:id="@+id/book_name"
-                                    android:layout_width="202dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="18dp"
-                                    android:layout_marginBottom="12dp"
-                                    android:layout_weight="0"
-                                    android:text="@string/home_book_1_name"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-
-                                <TextView
-                                    android:id="@+id/book_description_2"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0"
-                                    android:text="@string/home_book_1_description"
-                                    android:textColor="@color/white"
-                                    android:textSize="12sp" />
-                            </LinearLayout>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="240dp"
-                        android:layout_height="280dp"
-                        android:layout_marginRight="12dp"
-                        android:background="@color/white"
-                        android:backgroundTint="@color/white">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/rounded_style"
-                            android:backgroundTint="@color/black"
-                            android:orientation="vertical"
-                            android:padding="12sp">
-
-                            <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@drawable/cosmos_book_image"
-                                android:backgroundTint="#99000000"
-                                android:backgroundTintMode="src_atop"
+                                android:background="@drawable/rounded_style"
+                                android:backgroundTint="@color/black"
                                 android:orientation="vertical"
-                                android:paddingLeft="5dp"
-                                android:paddingTop="5dp"
-                                android:paddingRight="5dp">
+                                android:padding="12sp">
 
-                                <TextView
-                                    android:id="@+id/category_4"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="0"
-                                    android:background="#FF9800"
-                                    android:paddingLeft="5dp"
-                                    android:paddingTop="5dp"
-                                    android:paddingRight="5dp"
-                                    android:paddingBottom="5dp"
-                                    android:text="@string/home_book_1_category" />
-
-                                <TextView
-                                    android:id="@+id/book_name_2"
-                                    android:layout_width="202dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="18dp"
-                                    android:layout_marginBottom="12dp"
-                                    android:layout_weight="0"
-                                    android:text="@string/home_book_1_name"
-                                    android:textColor="@color/white"
-                                    android:textSize="20sp" />
-
-                                <TextView
-                                    android:id="@+id/book_description"
+                            <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="0"
-                                    android:text="@string/home_book_1_description"
-                                    android:textColor="@color/white"
-                                    android:textSize="12sp" />
+                                    android:layout_weight="1"
+                                    android:background="@drawable/cosmos_book_image"
+                                    android:backgroundTint="#99000000"
+                                    android:backgroundTintMode="src_atop"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="5dp">
+
+                                <TextView
+                                        android:id="@+id/category_3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0"
+                                        android:background="#FF9800"
+                                        android:paddingLeft="5dp"
+                                        android:paddingTop="5dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="@string/home_book_1_category"/>
+
+                                <TextView
+                                        android:id="@+id/book_name"
+                                        android:layout_width="202dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="18dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="0"
+                                        android:text="@string/home_book_1_name"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"/>
+
+                                <TextView
+                                        android:id="@+id/book_description_2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0"
+                                        android:text="@string/home_book_1_description"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="240dp"
+                            android:layout_height="280dp"
+                            android:layout_marginRight="12dp"
+                            android:background="@color/white"
+                            android:backgroundTint="@color/white">
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/rounded_style"
+                                android:backgroundTint="@color/black"
+                                android:orientation="vertical"
+                                android:padding="12sp">
+
+                            <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/cosmos_book_image"
+                                    android:backgroundTint="#99000000"
+                                    android:backgroundTintMode="src_atop"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="5dp"
+                                    android:paddingTop="5dp"
+                                    android:paddingRight="5dp">
+
+                                <TextView
+                                        android:id="@+id/category_4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0"
+                                        android:background="#FF9800"
+                                        android:paddingLeft="5dp"
+                                        android:paddingTop="5dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingBottom="5dp"
+                                        android:text="@string/home_book_1_category"/>
+
+                                <TextView
+                                        android:id="@+id/book_name_2"
+                                        android:layout_width="202dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="18dp"
+                                        android:layout_marginBottom="12dp"
+                                        android:layout_weight="0"
+                                        android:text="@string/home_book_1_name"
+                                        android:textColor="@color/white"
+                                        android:textSize="20sp"/>
+
+                                <TextView
+                                        android:id="@+id/book_description"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="0"
+                                        android:text="@string/home_book_1_description"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"/>
                             </LinearLayout>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -182,246 +180,246 @@
             </HorizontalScrollView>
 
             <TextView
-                android:id="@+id/recent_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="13dp"
-                android:layout_marginBottom="12dp"
-                android:text="@string/home_book_1_title2"
-                android:textColor="@color/black_light"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/daily_list" />
+                    android:id="@+id/recent_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="@string/home_book_1_title2"
+                    android:textColor="@color/black_light"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_list"/>
 
             <HorizontalScrollView
-                android:id="@+id/recientes"
-                android:layout_width="match_parent"
-                android:layout_height="264dp"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="2dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/daily_list"
-                tools:ignore="SpeakableTextPresentCheck">
+                    android:id="@+id/recientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="264dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_list"
+                    tools:ignore="SpeakableTextPresentCheck">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
 
                     <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="264sp">
+                            android:layout_width="match_parent"
+                            android:layout_height="264sp">
 
                         <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:orientation="vertical">
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:orientation="vertical">
 
                             <ImageView
-                                android:id="@+id/imageView"
-                                android:layout_width="130sp"
-                                android:layout_height="184sp"
-                                android:background="@drawable/rounded_style"
-                                android:src="@drawable/cosmos_book_image" />
+                                    android:id="@+id/imageView"
+                                    android:layout_width="130sp"
+                                    android:layout_height="184sp"
+                                    android:background="@drawable/rounded_style"
+                                    android:src="@drawable/cosmos_book_image"/>
 
                             <TextView
-                                android:id="@+id/recent_book_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10sp"
-                                android:layout_marginBottom="10sp"
-                                android:text="@string/home_book_1_recent"
-                                android:textColor="@color/black_light"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
+                                    android:id="@+id/recent_book_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10sp"
+                                    android:layout_marginBottom="10sp"
+                                    android:text="@string/home_book_1_recent"
+                                    android:textColor="@color/black_light"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"/>
 
                             <TextView
-                                android:id="@+id/recent_book_author"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/home_book_1_author"
-                                android:textColor="@color/black_light_sub"
-                                android:textSize="10sp" />
+                                    android:id="@+id/recent_book_author"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_book_1_author"
+                                    android:textColor="@color/black_light_sub"
+                                    android:textSize="10sp"/>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
 
             <TextView
-                android:id="@+id/new_section_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="13dp"
-                android:layout_marginBottom="10dp"
-                android:text="@string/home_book_1_news"
-                android:textColor="@color/black_light"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/daily_list" />
+                    android:id="@+id/new_section_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/home_book_1_news"
+                    android:textColor="@color/black_light"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_list"/>
 
             <HorizontalScrollView
-                android:id="@+id/new_books"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="12dp"
-                android:layout_marginEnd="1dp"
-                android:layout_marginBottom="2dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/daily_list"
-                tools:ignore="SpeakableTextPresentCheck">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="264sp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@color/white"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:id="@+id/new_image"
-                                android:layout_width="130sp"
-                                android:layout_height="184sp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/cosmos_book_image" />
-
-                            <TextView
-                                android:id="@+id/new_title"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10sp"
-                                android:layout_marginBottom="10sp"
-                                android:text="@string/home_book_1_recent"
-                                android:textColor="@color/black_light"
-                                android:textSize="16sp"
-                                android:textStyle="bold" />
-
-                            <TextView
-                                android:id="@+id/author_book_new"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/home_book_1_author"
-                                android:textColor="@color/black_light_sub"
-                                android:textSize="10sp" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-                </LinearLayout>
-            </HorizontalScrollView>
-
-            <TextView
-                android:id="@+id/recomendation_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="13dp"
-                android:layout_marginBottom="5dp"
-                android:text="@string/home_book_1_talvez"
-                android:textColor="@color/black_light"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/daily_list" />
-
-            <HorizontalScrollView
-                android:id="@+id/sugerencia"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginStart="13sp"
-                tools:ignore="SpeakableTextPresentCheck">
-
-                <LinearLayout
+                    android:id="@+id/new_books"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginBottom="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_list"
+                    tools:ignore="SpeakableTextPresentCheck">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
+                <LinearLayout
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:padding="8sp">
+                        android:orientation="vertical">
 
-                        <ImageView
-                            android:id="@+id/image_sugerencia_3"
-                            android:layout_width="40sp"
-                            android:layout_height="40sp"
-                            android:adjustViewBounds="true"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cosmos_book_image" />
+                    <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="264sp">
 
                         <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:orientation="vertical">
+
+                            <ImageView
+                                    android:id="@+id/new_image"
+                                    android:layout_width="130sp"
+                                    android:layout_height="184sp"
+                                    android:scaleType="centerCrop"
+                                    android:src="@drawable/cosmos_book_image"/>
+
+                            <TextView
+                                    android:id="@+id/new_title"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10sp"
+                                    android:layout_marginBottom="10sp"
+                                    android:text="@string/home_book_1_recent"
+                                    android:textColor="@color/black_light"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold"/>
+
+                            <TextView
+                                    android:id="@+id/author_book_new"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_book_1_author"
+                                    android:textColor="@color/black_light_sub"
+                                    android:textSize="10sp"/>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                    android:id="@+id/recomendation_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="13dp"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/home_book_1_talvez"
+                    android:textColor="@color/black_light"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/daily_list"/>
+
+            <HorizontalScrollView
+                    android:id="@+id/sugerencia"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="13sp"
+                    tools:ignore="SpeakableTextPresentCheck" android:layout_marginBottom="64sp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                    <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="10sp"
-                            android:orientation="vertical">
+                            android:orientation="horizontal"
+                            android:padding="8sp">
+
+                        <ImageView
+                                android:id="@+id/image_sugerencia_3"
+                                android:layout_width="40sp"
+                                android:layout_height="40sp"
+                                android:adjustViewBounds="true"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cosmos_book_image"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/book_name_sugerencia"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/home_book_1_name"
-                                android:textColor="@color/black_light" />
+                                    android:id="@+id/book_name_sugerencia"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_book_1_name"
+                                    android:textColor="@color/black_light"/>
 
                             <TextView
-                                android:id="@+id/book_sugerencia_author"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/home_book_1_author"
-                                android:textColor="@color/black_light_sub" />
+                                    android:id="@+id/book_sugerencia_author"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_book_1_author"
+                                    android:textColor="@color/black_light_sub"/>
                         </LinearLayout>
                     </LinearLayout>
 
                     <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:padding="8sp">
-
-                        <ImageView
-                            android:id="@+id/image_sugerencia_4"
-                            android:layout_width="40sp"
-                            android:layout_height="40sp"
-                            android:adjustViewBounds="true"
-                            android:background="@drawable/rounded_style"
-                            android:fitsSystemWindows="false"
-                            android:scaleType="centerCrop"
-                            android:src="@drawable/cosmos_book_image" />
-
-                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginStart="10sp"
-                            android:orientation="vertical">
+                            android:orientation="horizontal"
+                            android:padding="8sp">
+
+                        <ImageView
+                                android:id="@+id/image_sugerencia_4"
+                                android:layout_width="40sp"
+                                android:layout_height="40sp"
+                                android:adjustViewBounds="true"
+                                android:background="@drawable/rounded_style"
+                                android:fitsSystemWindows="false"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/cosmos_book_image"/>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10sp"
+                                android:orientation="vertical">
 
                             <TextView
-                                android:id="@+id/book_name_sugerencia_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/home_book_1_name"
-                                android:textColor="@color/black_light" />
+                                    android:id="@+id/book_name_sugerencia_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_book_1_name"
+                                    android:textColor="@color/black_light"/>
 
                             <TextView
-                                android:id="@+id/book_sugerencia_author_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/home_book_1_author"
-                                android:textColor="@color/black_light_sub" />
+                                    android:id="@+id/book_sugerencia_author_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/home_book_1_author"
+                                    android:textColor="@color/black_light_sub"/>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
