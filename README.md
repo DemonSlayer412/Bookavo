@@ -55,8 +55,6 @@ git clone git@github.com:DemonSlayer412/Bookavo.git
 <img src="https://i.imgur.com/vMCGvSt.jpg" width="200px" hspace="20" />
 
 <img src="https://i.imgur.com/1eAzB6g.jpg" width="200px" />
-  
-<img src="https://i.imgur.com/32Swch5.jpg" width="200px" />
 </p>
   
   
