@@ -15,6 +15,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class inApp : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
 
+    public fun getBottomNavHeight(): Int {
+        return binding.navView.height
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

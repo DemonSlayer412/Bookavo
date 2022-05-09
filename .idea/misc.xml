@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/activity_main.xml" value="0.221025641025641" />
+        <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/descubrir.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/explorar.xml" value="0.221025641025641" />
+        <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/favoritos.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/fragment_dashboard.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/fragment_home.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/fragment_notifications.xml" value="0.221025641025641" />
