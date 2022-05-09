@@ -7,7 +7,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal"
         android:background="?attr/colorOnPrimary"
-        tools:context=".Home">
+        tools:context=".inAppUI.Home">
 
     <ScrollView
             android:id="@+id/scroll_container"

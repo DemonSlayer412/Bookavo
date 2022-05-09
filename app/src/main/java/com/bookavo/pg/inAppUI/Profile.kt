@@ -1,4 +1,4 @@
-package com.bookavo.pg
+package com.bookavo.pg.inAppUI
 
 import android.content.Intent
 import android.net.Uri

@@ -8,7 +8,7 @@
     android:background="@color/white"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".Profile">
+    tools:context=".inAppUI.Profile">
 
     <FrameLayout
         android:layout_width="match_parent"

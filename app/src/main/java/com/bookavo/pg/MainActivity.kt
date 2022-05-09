@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         val boton2:Button = findViewById(R.id.button_Register)
         boton2.setOnClickListener {
             Log.d("-----Funca-----","la wea 2")
-            startActivity(Intent(this,register_main::class.java))
+            startActivity(Intent(this,Register::class.java))
         }
     }
 }

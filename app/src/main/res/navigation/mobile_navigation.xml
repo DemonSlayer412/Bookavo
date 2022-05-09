@@ -7,29 +7,23 @@
 
     <fragment
         android:id="@+id/navigation_inicio"
-        android:name="com.bookavo.pg.Home"
+        android:name="com.bookavo.pg.inAppUI.Home"
         android:label="@string/title_home"
         tools:layout="@layout/home" />
 
     <fragment
-        android:id="@+id/navigation_descubrir"
-        android:name="com.bookavo.pg.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
         android:id="@+id/navigation_perfil"
-        android:name="com.bookavo.pg.Profile"
+        android:name="com.bookavo.pg.inAppUI.Profile"
         android:label="@string/title_me"
         tools:layout="@layout/profile"/>
     <fragment
-        android:id="@+id/navigation_explorar"
-        android:name="com.bookavo.pg.Explorar"
+        android:id="@+id/navigation_descubrir"
+        android:name="com.bookavo.pg.inAppUI.Descubrir"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/explorar"/>
+        tools:layout="@layout/descubrir"/>
     <fragment
         android:id="@+id/navigation_favoritos"
-        android:name="com.bookavo.pg.Home"
+        android:name="com.bookavo.pg.inAppUI.Favoritos"
         android:label="@string/title_favoritos"
-        tools:layout="@layout/home"/>
+        tools:layout="@layout/favoritos"/>
 </navigation>

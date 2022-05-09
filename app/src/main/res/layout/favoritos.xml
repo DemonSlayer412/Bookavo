@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/favorites_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="Favorites"
+        android:textColor="#353940"
+        android:textSize="30dp"
+
+        />
+
+    <Button
+        android:id="@+id/book_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/favorites_text"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#118A7E"
+        android:ems="7"
+        android:text="Book"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/author_button"
+        android:layout_below="@id/favorites_text"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Author"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"
+        android:ems="7"/>
+
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/img"
+        android:layout_below="@id/book_button"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/img_1"
+        android:layout_below="@id/imageView2"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"/>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:srcCompat="@drawable/img_2"
+        android:layout_below="@id/imageView3"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="25dp"
+        />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/explorediscover"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/imageView4"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="22dp"
+        android:backgroundTint="#EDE5E5"
+        android:clickable="true"
+        android:contentDescription="@string/appbar_scrolling_view_behavior"
+        app:backgroundTint="@color/white"
+        app:fabSize="mini"
+        app:rippleColor="@color/white"
+        app:srcCompat="@drawable/icon_explorediscover"
+        />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView4"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="35dp"
+        android:ems="7"
+        android:text="Explore Discover"
+        android:textColor="@color/black"
+        />
+
+
+</RelativeLayout>
