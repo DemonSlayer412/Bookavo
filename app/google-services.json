@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "410892756548",
+    "project_id": "artelista-b09de",
+    "storage_bucket": "artelista-b09de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:410892756548:android:4aadfa24bc17493970fe11",
+        "android_client_info": {
+          "package_name": "com.labs.nubook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "410892756548-7rc831plknm7mstsuon4vio2v2ih4mhj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlWLbsiuoetbrWOpjD8-bINc6xJqYpxoI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "410892756548-7rc831plknm7mstsuon4vio2v2ih4mhj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
