@@ -1,12 +1,9 @@
 package com.bookavo.pg
 
 
-import android.util.Log
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.core.util.PatternsCompat
 import com.bookavo.pg.databinding.RegisterBinding
@@ -14,12 +11,12 @@ import java.util.regex.Pattern
 
 //la wea bugeada
 class Register : AppCompatActivity() {
-    private var _binding: RegisterBinding? = null
-    private val binding get() = _binding!!
+    private lateinit var binding: RegisterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.register)
+        binding = RegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val botonRegistrar: Button = findViewById(R.id.register_button)
         botonRegistrar.setOnClickListener{
@@ -28,9 +25,9 @@ class Register : AppCompatActivity() {
     }
 
     private fun validate(){
-        val result = arrayOf(validateEmail(), validatePassword())
+        val result = validateEmail()
 
-        if (false in result){
+        if (result){
             Toast.makeText(this,"Ha ocurrido un error",Toast.LENGTH_LONG).show()
             return
         }
@@ -38,6 +35,7 @@ class Register : AppCompatActivity() {
     }
 
     private fun validateEmail() : Boolean {
+//        val email = binding.mailInput.text.toString()
         val email = binding.mailInput.text.toString()
 
         return if (email.isEmpty()) {
@@ -47,7 +45,6 @@ class Register : AppCompatActivity() {
             Toast.makeText(this,"Enter a valid email", Toast.LENGTH_LONG).show()
             false
         }else{
-            binding.mailInput.error = null
             true
         }
     }
