@@ -20,6 +20,7 @@
         android:layout_marginEnd="30dp"
         android:minHeight="48dp"
         android:text="Login"
+
         android:textColor="#252B46"
         android:textSize="25dp" />
 
