@@ -8,6 +8,7 @@
     <!--  Home screen: Miguel  -->
     <string name="home_title">Recomendaciones diarias</string>
     <string name="home_book_1_name">Cosmos, una odisea en el espacio</string>
+    <string name="home_book_2_name">Aguacate, no way home</string>
     <string name="home_book_1_category">Novel</string>
     <string name="home_book_1_description">continuación de Cosmos: un viaje personal, que fuera presentada por Carl Sagan</string>
     <string name="home_book_1_title2">Recientemente leidos</string>

@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/drawable/splash_screen.xml" value="0.10885416666666667" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/activity_main.xml" value="0.221025641025641" />
+        <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/card_daily.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/descubrir.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/explorar.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/favoritos.xml" value="0.221025641025641" />
@@ -21,5 +23,5 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17_PREVIEW" project-jdk-name="17" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="17" project-jdk-type="JavaSDK" />
 </project>
