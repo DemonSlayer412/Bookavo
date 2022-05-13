@@ -3,8 +3,6 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Enrique/AndroidStudioProjects/Bookavo/app/src/main/res/layout/login.xml" value="0.2341485507246377" />
-        <entry key="..\:/Users/Enrique/AndroidStudioProjects/Bookavo/app/src/main/res/layout/register.xml" value="0.25" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/drawable/splash_screen.xml" value="0.10885416666666667" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/activity_main.xml" value="0.221025641025641" />
         <entry key="..\:/Users/migueltemp/project/Bookavo/app/src/main/res/layout/card_daily.xml" value="0.221025641025641" />
@@ -25,5 +23,5 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="jbr-11" project-jdk-type="JavaSDK" />
 </project>
