@@ -50,7 +50,8 @@
         android:drawableStart="@drawable/icon_name"
         android:drawablePadding="12dp"
         android:minHeight="48dp"
-        android:hint="Name"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -63,7 +64,8 @@
         android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/icon_name"
         android:drawablePadding="12dp"
-        android:hint="Username"
+        android:hint="Nombre de usuario"
+        android:inputType="textPersonName"
         android:minHeight="48dp" />
 
     <EditText
@@ -77,8 +79,9 @@
         android:drawableStart="@drawable/icon_lock"
         android:drawablePadding="12dp"
         android:ems="10"
-        android:hint="Password"
+        android:hint="Contraseña"
         android:inputType="textPassword"
+        android:maxLength="16"
         android:minHeight="48dp" />
 
     <Button

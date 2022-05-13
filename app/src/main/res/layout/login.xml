@@ -34,7 +34,8 @@
         android:drawableStart="@drawable/icon_name"
         android:drawablePadding="12dp"
         android:ems="17"
-        android:hint="Name"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="#C4C4C4" />
 
@@ -49,8 +50,9 @@
         android:drawableStart="@drawable/icon_lock"
         android:drawablePadding="12dp"
         android:ems="17"
-        android:hint="Password"
+        android:hint="Contraseña"
         android:inputType="textPassword"
+        android:maxLength="16"
         android:minHeight="48dp"
         android:textColor="#C4C4C4"
          />
