@@ -50,7 +50,7 @@ class Login : AppCompatActivity() {
         binding.buttonRegister.setOnClickListener {
             Log.d("-----Funca-----","la wea 2")
             startActivity(Intent(this,Register::class.java))
-            finish()
+
         }
     }
 }
