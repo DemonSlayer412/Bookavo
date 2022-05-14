@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:opacity="opaque">
     <item android:drawable="@color/white"/>
     <item
@@ -9,8 +10,19 @@
         android:bottom="260dp"
         android:gravity="center"
         >
-        <bitmap android:src="@drawable/siu"/>
-
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintWidth_percent="0.9"
+            app:layout_constraintVertical_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/bookavo"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"/>
     </item>
 
 </layer-list>
