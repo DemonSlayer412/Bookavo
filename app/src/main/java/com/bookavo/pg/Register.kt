@@ -1,6 +1,7 @@
 package com.bookavo.pg
 
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.core.util.PatternsCompat
 import com.bookavo.pg.databinding.RegisterBinding
 import java.util.regex.Pattern
+import com.google.firebase.auth.FirebaseAuth
 
 //la wea bugeada
 class Register : AppCompatActivity() {
@@ -25,13 +27,27 @@ class Register : AppCompatActivity() {
     }
 
     private fun validate(){
-        val result = validateEmail()
+        val result = arrayOf(validateEmail(), validatePassword())
+        println("Resultados: ")
 
-        if (result){
+        if (false in result){
             Toast.makeText(this,"Ha ocurrido un error",Toast.LENGTH_LONG).show()
             return
         }
         Toast.makeText(this,"Registrado correctamente", Toast.LENGTH_LONG).show()
+        FirebaseAuth.getInstance()
+            .createUserWithEmailAndPassword(binding.mailInput.text.toString(),
+                binding.passwordInput.text.toString()).addOnCompleteListener{
+                if (it.isSuccessful){
+                    Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
+                    startActivity(Intent(this, inApp::class.java))
+                    finish()
+                }
+                else{
+                    println(it.exception)
+                    Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_LONG).show()
+                }
+            }
     }
 
     private fun validateEmail() : Boolean {
@@ -69,7 +85,7 @@ class Register : AppCompatActivity() {
             Toast.makeText(this,"Enter a password", Toast.LENGTH_LONG).show()
             false
         }else if (!passwordRegex.matcher(password).matches()){
-            Toast.makeText(this,"Too weak", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"La constreseñá necesita: 1 digito, 1 uppser case, 1 lower case, sin espacios, 1 caracter especial", Toast.LENGTH_LONG).show()
             false
         }else{
             true

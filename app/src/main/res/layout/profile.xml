@@ -91,7 +91,7 @@
         android:src="@drawable/twitter" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/close_session"
         android:layout_width="163dp"
         android:layout_height="wrap_content"
         android:text="Cerrar Sesion" />

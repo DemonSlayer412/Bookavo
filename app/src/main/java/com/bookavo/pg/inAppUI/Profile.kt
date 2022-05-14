@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bookavo.pg.databinding.ProfileBinding
+import com.google.firebase.auth.FirebaseAuth
 
 
 class Profile: Fragment() {
     private var _binding: ProfileBinding? = null
     private val binding get() = _binding!!
+    private val firebaseAuth = FirebaseAuth.getInstance()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,6 +30,9 @@ class Profile: Fragment() {
         binding.socialTwitter.setOnClickListener {
             val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.twitter.com"))
             startActivity(browserIntent)
+        }
+        binding.closeSession.setOnClickListener {
+            firebaseAuth.signOut()
         }
     }
 
