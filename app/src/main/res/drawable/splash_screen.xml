@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:opacity="opaque">
     <item android:drawable="@color/white"/>
     <item
@@ -9,8 +10,9 @@
         android:bottom="260dp"
         android:gravity="center"
         >
-        <bitmap android:src="@drawable/siu"/>
-
+        <bitmap
+            android:src="@drawable/siu"
+            ></bitmap>
     </item>
 
 </layer-list>
