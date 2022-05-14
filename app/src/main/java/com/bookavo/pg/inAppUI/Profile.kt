@@ -7,7 +7,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.bookavo.pg.Login
+import com.bookavo.pg.databinding.LoginBinding
 import com.bookavo.pg.databinding.ProfileBinding
+import com.bookavo.pg.inApp
 import com.google.firebase.auth.FirebaseAuth
 
 
@@ -33,6 +36,7 @@ class Profile: Fragment() {
         }
         binding.closeSession.setOnClickListener {
             firebaseAuth.signOut()
+            startActivity(Intent(context, Login::class.java))
         }
     }
 

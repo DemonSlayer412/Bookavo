@@ -29,19 +29,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this,inApp::class.java))
         } else {
             setContentView(R.layout.login)
-            //ClickLoginButton
-            val boton:Button = findViewById(R.id.button_Login)
-            boton.setOnClickListener {
-                startActivity(Intent(this,inApp::class.java))
-                finish()
-            }
-            //RegisterButton
-            val boton2:Button = findViewById(R.id.button_Register)
-            boton2.setOnClickListener {
-                Log.d("-----Funca-----","la wea 2")
-                startActivity(Intent(this,Register::class.java))
-                finish()
-            }
+            startActivity(Intent(this,Login::class.java))
         }
     }
 }
