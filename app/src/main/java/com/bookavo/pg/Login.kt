@@ -8,7 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.bookavo.pg.databinding.LoginBinding
 
-//la wea bugeada
+//hola wapo
 class Login : AppCompatActivity() {
     private lateinit var binding: LoginBinding
 
