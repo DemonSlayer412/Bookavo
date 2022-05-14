@@ -1,8 +1,6 @@
 package com.bookavo.pg
 
 import android.os.Bundle
-import android.view.View
-import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -14,10 +12,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class inApp : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
-
-    public fun getBottomNavHeight(): Int {
-        return binding.navView.height
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +33,7 @@ class inApp : AppCompatActivity(){
             )
         )
 
-        supportActionBar?.hide();
+        supportActionBar?.hide()
 
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)

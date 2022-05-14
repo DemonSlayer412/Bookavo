@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".Login"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -14,16 +16,15 @@
 
     <TextView
         android:id="@+id/Login"
-        android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="30dp"
         android:minHeight="48dp"
-        android:text="Login"
+        android:text="Iniciar Sesión"
 
-        android:textColor="#252B46"
         android:textSize="25dp" />
 
     <EditText

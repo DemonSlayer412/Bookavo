@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <ImageView
         android:id="@+id/register_image"
@@ -17,11 +18,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/register_image"
         android:layout_marginStart="30dp"
-        android:layout_marginEnd="30dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
         android:minHeight="48dp"
-        android:text="Register"
-        android:textColor="#252B46"
+        android:text="Registrarse"
         android:textSize="30dp" />
 
     <EditText
@@ -35,9 +35,10 @@
         android:drawableStart="@drawable/image_mail"
         android:drawablePadding="12dp"
         android:ems="10"
+        android:hint="Correo"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
-        android:hint="Correo" />
+        android:textColor="#191313" />
 
     <EditText
         android:id="@+id/name_input"
@@ -49,9 +50,10 @@
         android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/icon_name"
         android:drawablePadding="12dp"
-        android:minHeight="48dp"
         android:hint="Nombre"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#191313"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -64,9 +66,10 @@
         android:layout_marginEnd="30dp"
         android:drawableStart="@drawable/icon_name"
         android:drawablePadding="12dp"
-        android:inputType="textPersonName"
         android:hint="Nombre de usuario"
-        android:minHeight="48dp" />
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#191313" />
 
     <EditText
         android:id="@+id/password_input"

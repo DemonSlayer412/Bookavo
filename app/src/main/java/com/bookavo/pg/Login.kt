@@ -5,6 +5,8 @@ import com.google.firebase.auth.FirebaseAuth
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
 import com.bookavo.pg.databinding.LoginBinding
 
@@ -17,7 +19,14 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = LoginBinding.inflate(layoutInflater)
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(binding.root)
+
 //       val botonRegistrar: Button = findViewById(R.id.register_button)
         //ClickLoginButton
         println("Here")
@@ -52,5 +61,7 @@ class Login : AppCompatActivity() {
             startActivity(Intent(this,Register::class.java))
 
         }
+
+        supportActionBar?.hide()
     }
 }

@@ -3,6 +3,8 @@ package com.bookavo.pg
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.Toast
 import androidx.core.util.PatternsCompat
@@ -17,12 +19,19 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = RegisterBinding.inflate(layoutInflater)
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        getWindow().setFlags(
+            WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         setContentView(binding.root)
 
         val botonRegistrar: Button = findViewById(R.id.register_button)
         botonRegistrar.setOnClickListener{
             validate()
         }
+        supportActionBar?.hide()
     }
 
     private fun validate(){
