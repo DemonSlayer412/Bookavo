@@ -56,6 +56,8 @@ git clone git@github.com:DemonSlayer412/Bookavo.git
 
 <img src="https://i.imgur.com/1eAzB6g.jpg" width="200px" />
 </p>
+
+### video ejemplo: [video ejemplo](https://youtu.be/r7O2RzDI82Y)
   
   
 ## Contribuidores
