@@ -33,7 +33,7 @@
             app:srcCompat="@drawable/cosmos_book_image" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/NombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="31sp"
@@ -45,7 +45,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/profile_job_author"
+            android:id="@+id/UserName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/profile_job"
