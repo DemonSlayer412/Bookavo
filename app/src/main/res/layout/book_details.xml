@@ -124,11 +124,10 @@
                                 android:layout_height="wrap_content" android:id="@+id/pages_count_details"
                                 android:textSize="18sp"/>
                         <ImageView
-                                android:src="@drawable/ic_star"
+                                android:src="@drawable/ic_book"
                                 android:layout_width="24sp"
-                                android:layout_height="wrap_content" android:id="@+id/book_icon"
-                                android:layout_weight="0" app:srcCompat="@drawable/ic_book"
-                                android:baselineAlignBottom="false" android:layout_gravity="center_vertical"/>
+                                android:layout_height="wrap_content" android:id="@+id/imageView3"
+                                android:layout_weight="0" android:layout_gravity="center_vertical"/>
                     </LinearLayout>
                     <TextView
                             android:text="pages"
@@ -150,11 +149,10 @@
                                 android:layout_height="wrap_content" android:id="@+id/duration_details"
                                 android:textSize="18sp"/>
                         <ImageView
-                                android:src="@drawable/ic_star"
+                                android:src="@drawable/ic_clock"
                                 android:layout_width="24sp"
-                                android:layout_height="wrap_content" android:id="@+id/image_clock"
-                                android:layout_weight="0" app:srcCompat="@drawable/ic_clock"
-                                android:layout_gravity="center_vertical"/>
+                                android:layout_height="wrap_content" android:id="@+id/imageView4"
+                                android:layout_weight="0" android:layout_gravity="center_vertical"/>
                     </LinearLayout>
                     <TextView
                             android:text="duration"
