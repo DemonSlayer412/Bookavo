@@ -95,16 +95,17 @@
                         <TextView
                                 android:text="4.2"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/textView9"
+                                android:layout_height="wrap_content" android:id="@+id/review_details"
                                 android:textSize="18sp"/>
                         <ImageView
                                 android:src="@drawable/ic_star"
                                 android:layout_width="24sp"
-                                android:layout_height="wrap_content" android:id="@+id/imageView9"
-                                android:layout_weight="0" android:layout_gravity="center_vertical"/>
+                                android:layout_height="wrap_content" android:id="@+id/start_icon"
+                                android:layout_weight="0" android:layout_gravity="center_vertical"
+                                android:textAlignment="gravity"/>
                     </LinearLayout>
                     <TextView
-                            android:text="pages"
+                            android:text="reviews"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent" android:id="@+id/textView10"
                             android:textColor="@color/black" android:textSize="12sp"/>
@@ -120,17 +121,17 @@
                         <TextView
                                 android:text="4.2"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/textView8"
+                                android:layout_height="wrap_content" android:id="@+id/pages_count_details"
                                 android:textSize="18sp"/>
                         <ImageView
                                 android:src="@drawable/ic_star"
-                                android:layout_width="12sp"
-                                android:layout_height="wrap_content" android:id="@+id/imageView5"
+                                android:layout_width="24sp"
+                                android:layout_height="wrap_content" android:id="@+id/book_icon"
                                 android:layout_weight="0" app:srcCompat="@drawable/ic_book"
                                 android:baselineAlignBottom="false" android:layout_gravity="center_vertical"/>
                     </LinearLayout>
                     <TextView
-                            android:text="308 reviews"
+                            android:text="pages"
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent" android:id="@+id/textView7"
                             android:textColor="@color/black" android:textSize="12sp"/>
@@ -146,12 +147,12 @@
                         <TextView
                                 android:text="4.2"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/textView11"
+                                android:layout_height="wrap_content" android:id="@+id/duration_details"
                                 android:textSize="18sp"/>
                         <ImageView
                                 android:src="@drawable/ic_star"
-                                android:layout_width="12sp"
-                                android:layout_height="wrap_content" android:id="@+id/imageView11"
+                                android:layout_width="24sp"
+                                android:layout_height="wrap_content" android:id="@+id/image_clock"
                                 android:layout_weight="0" app:srcCompat="@drawable/ic_clock"
                                 android:layout_gravity="center_vertical"/>
                     </LinearLayout>
@@ -165,7 +166,8 @@
             <LinearLayout
                     android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:layout_marginTop="18dp" android:padding="18dp">
+                    android:layout_height="match_parent" android:layout_marginTop="18dp" android:padding="18dp"
+                    android:layout_marginBottom="64dp">
                 <TextView
                         android:text="Available Chapters"
                         android:layout_width="match_parent"
@@ -176,35 +178,7 @@
                         android:orientation="vertical"
                         android:layout_width="match_parent"
                         android:id="@+id/chapter_container"
-                        android:layout_height="match_parent" android:layout_weight="1">
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" android:layout_weight="1"
-                            android:id="@+id/chapter_card" android:gravity="center_vertical">
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="312dp"
-                                android:layout_height="wrap_content" android:id="@+id/chapter_info"
-                                android:layout_marginRight="12dp">
-                            <TextView
-                                    android:text="Manusia Setengah Dewa"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" android:id="@+id/name_chapter"
-                                    android:textSize="13sp"
-                                    android:textStyle="bold" android:textColor="@color/black_light"/>
-                            <TextView
-                                    android:text="3 minutes"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" android:id="@+id/time_chapter"/>
-                        </LinearLayout>
-                        <ImageButton
-                                android:src="@drawable/ic_play"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/btn_play_chapter"
-                        />
-                    </LinearLayout>
-                </LinearLayout>
+                        android:layout_height="match_parent" android:layout_weight="1"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

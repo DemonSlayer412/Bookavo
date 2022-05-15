@@ -40,6 +40,9 @@ class BookDetails : Fragment() {
                     binding.bookAuthorDetails.text = it.get("author").toString()
                     binding.summaryDetails.text = it.get("summary").toString()
                     binding.btnPriceDetails.text = "buy " + it.get("price").toString() + "$"
+                    binding.pagesCountDetails.text = it.get("page_count").toString()
+                    binding.reviewDetails.text = it.get("star").toString()
+                    binding.durationDetails.text = it.get("duration").toString() + " hrs"
                     binding.imageBook.setImageBitmap(createBitMap(it.get("img_portrait").toString()))
                     //compare email with bookID of collection
                     db.collection("likes_books").get().addOnSuccessListener {

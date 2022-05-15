@@ -6,12 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.bookavo.pg.R
-import com.bookavo.pg.databinding.DescubrirBinding
 import com.bookavo.pg.databinding.FavoritosBinding
+import com.google.firebase.firestore.FirebaseFirestore
 
 class Favoritos : Fragment() {
-
+    private val db = FirebaseFirestore.getInstance()
     private var _binding: FavoritosBinding? = null
 
     // This property is only valid between onCreateView and
@@ -30,7 +29,6 @@ class Favoritos : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 //        binding.buttonFirst.setOnClickListener {
 //            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
 //        }
