@@ -1,6 +1,7 @@
 package com.bookavo.pg
 
 import android.os.Bundle
+import android.view.View
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
@@ -63,5 +64,10 @@ class inApp : AppCompatActivity(){
             }
             .setCancelable(false)
             .show()
+    }
+
+
+    fun onClickCard(view: View) {
+        println("click card")
     }
 }

@@ -41,10 +41,9 @@ class MainActivity : AppCompatActivity() {
             },
             3000 // value in milliseconds
         )
+    }
 
-
-
-
-
+    fun clickEventForCard() {
+        println("clickEventForCard")
     }
 }

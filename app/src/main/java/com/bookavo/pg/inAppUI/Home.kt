@@ -18,9 +18,6 @@ class Home : Fragment() {
 
     private val db = FirebaseFirestore.getInstance()
     private var _binding: HomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -53,5 +50,7 @@ class Home : Fragment() {
         _binding = null
     }
 
-
+    fun onClickCard(view: View) {
+        println("click card")
+    }
 }
