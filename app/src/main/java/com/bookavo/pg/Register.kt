@@ -12,7 +12,6 @@ import com.bookavo.pg.databinding.RegisterBinding
 import java.util.regex.Pattern
 import com.google.firebase.auth.FirebaseAuth
 
-//la wea bugeada
 class Register : AppCompatActivity() {
     private lateinit var binding: RegisterBinding
 
@@ -23,60 +22,46 @@ class Register : AppCompatActivity() {
         requestWindowFeature(Window.FEATURE_NO_TITLE)
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN)
+            WindowManager.LayoutParams.FLAG_FULLSCREEN
+        )
 
         setContentView(binding.root)
 
         val botonRegistrar: Button = findViewById(R.id.register_button)
-        botonRegistrar.setOnClickListener{
+        botonRegistrar.setOnClickListener {
             validate()
         }
         supportActionBar?.hide()
     }
 
-    private fun validate(){
-        val result = arrayOf(validateEmail(), validatePassword())
-        println("Resultados: ")
-
-        if (false in result){
-            Toast.makeText(this,"Ha ocurrido un error",Toast.LENGTH_LONG).show()
+    private fun validate() {
+        if (verificacion() == false) {
+            //Toast.makeText(this,"Ha ocurrido un error",Toast.LENGTH_LONG).show()
             return
         }
-        Toast.makeText(this,"Registrado correctamente", Toast.LENGTH_LONG).show()
-        FirebaseAuth.getInstance()
-            .createUserWithEmailAndPassword(binding.mailInput.text.toString(),
-                binding.passwordInput.text.toString()).addOnCompleteListener{
-                if (it.isSuccessful){
-                    Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
-                    startActivity(Intent(this, inApp::class.java))
-                    finish()
+        else {
+            Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
+            FirebaseAuth.getInstance()
+                .createUserWithEmailAndPassword(
+                    binding.mailInput.text.toString(),
+                    binding.passwordInput.text.toString()
+                ).addOnCompleteListener {
+                    if (it.isSuccessful) {
+                        Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
+                        startActivity(Intent(this, inApp::class.java))
+                        finish()
+                    } else {
+                        println(it.exception)
+                        //Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_LONG).show()
+                    }
                 }
-                else{
-                    println(it.exception)
-                    Toast.makeText(this, "Ha ocurrido un error", Toast.LENGTH_LONG).show()
-                }
-            }
-    }
-
-    private fun validateEmail() : Boolean {
-//        val email = binding.mailInput.text.toString()
-        val email = binding.mailInput.text.toString()
-
-        return if (email.isEmpty()) {
-            Toast.makeText(this,"Field cannot be empty", Toast.LENGTH_LONG).show()
-            false
-        }else if (!PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()) {
-            Toast.makeText(this,"Enter a valid email", Toast.LENGTH_LONG).show()
-            false
-        }else{
-            true
         }
     }
 
-    private fun validatePassword() : Boolean {
+    private fun validarPassYMail(): Int {
 
+        val email = binding.mailInput.text.toString()
         val password = binding.passwordInput.text.toString()
-
         // Patrón con expresiones regulares
         val passwordRegex = Pattern.compile(
             "^" +
@@ -85,18 +70,59 @@ class Register : AppCompatActivity() {
                     "(?=.*[A-Z])" +        //at least 1 upper case letter
                     "(?=.*[@#$%^&+=])" +    //at least 1 special character
                     "(?=\\S+$)" +           //no white spaces
-                    ".{4,}" +               //at least 4 characters
+                    ".{6,}" +               //at least 4 characters
                     "$"
         )
-
-        return if (password.isEmpty()){
-            Toast.makeText(this,"Enter a password", Toast.LENGTH_LONG).show()
-            false
-        }else if (!passwordRegex.matcher(password).matches()){
-            Toast.makeText(this,"La constreseñá necesita: 1 digito, 1 uppser case, 1 lower case, sin espacios, 1 caracter especial", Toast.LENGTH_LONG).show()
-            false
-        }else{
-            true
+        //Validaciones
+        if (email.isEmpty()) {
+            return 1 //email vacio
+        } else if (!PatternsCompat.EMAIL_ADDRESS.matcher(email).matches()) {
+            return 2 //email no cumple
+        } else if (password.isEmpty()) {
+            return 3 // pass vacio
+        }
+        else if(password.length<6) {
+            return 9
+        }
+        else if (!passwordRegex.matcher(password).matches()) {//numeros
+            return 4
+        }
+        else {
+            return 0 //todo ok
         }
     }
+
+    private fun verificacion(): Boolean {
+        var codigo = validarPassYMail()
+        var salida = false
+        when (codigo) {
+            1 -> Toast.makeText(this, "Escriba un correo", Toast.LENGTH_LONG).show()
+            2 -> Toast.makeText(this, "Email invalido", Toast.LENGTH_LONG).show()
+            3 -> Toast.makeText(this, "Escriba una contraseña", Toast.LENGTH_LONG).show()
+            4 -> Toast.makeText(this, "Contraseña muy debil", Toast.LENGTH_LONG).show()
+            9 -> Toast.makeText(this, "Contraseña necesita al menos 6 caracteres", Toast.LENGTH_LONG).show()
+
+            /*
+              5 -> Toast.makeText(this, "Contraseña necesita al menos 1 simbolo", Toast.LENGTH_LONG).show()
+              6 -> Toast.makeText(this, "Contraseña necesita al menos 1 minuscula", Toast.LENGTH_LONG).show()
+              7 -> Toast.makeText(this, "Contraseña necesita al menos 1 mayuscula", Toast.LENGTH_LONG).show()
+              8 -> Toast.makeText(this, "Contraseña necesita al menos 1 numero", Toast.LENGTH_LONG).show()
+              10 ->Toast.makeText(this, "Contraseña no puede contener espacios", Toast.LENGTH_LONG).show()
+              11 ->Toast.makeText(this, "Error desconocido", Toast.LENGTH_LONG).show()
+            */
+            0 -> salida = true
+         }
+        println("verificacion:" + salida)
+        println("Codigo:" + codigo)
+        return salida
+    }
+
+    //codigos de error:
+    // 1 email vacio
+    // 2 email no cumple
+
+    // 3 pass vacio
+    // 4 pass debil
+
+
 }

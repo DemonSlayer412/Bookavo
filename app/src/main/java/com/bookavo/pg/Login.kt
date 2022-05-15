@@ -36,15 +36,17 @@ class Login : AppCompatActivity() {
                     .addOnCompleteListener(this) { task ->
                         if (task.isSuccessful) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("Login", "signInWithEmail:success")
+                            //Log.d("Login", "signInWithEmail:success")
                             val user = firebaseAuth.currentUser
                             val intent = Intent(this, inApp::class.java)
+                            Toast.makeText(baseContext, "Bienvenido/a",
+                                Toast.LENGTH_SHORT).show()
                             startActivity(intent)
                             finish()
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w("Login", "signInWithEmail:failure", task.exception)
-                            Toast.makeText(baseContext, "Authentication failed.",
+                            //Log.w("Login", "signInWithEmail:failure", task.exception)
+                            Toast.makeText(baseContext, "Correo o contraseña incorrecta",
                                 Toast.LENGTH_SHORT).show()
 
                         }

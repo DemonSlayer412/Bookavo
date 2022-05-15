@@ -28,20 +28,20 @@
         android:textSize="25dp" />
 
     <EditText
-            android:id="@+id/Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/Login"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="30dp"
-            android:drawableStart="@drawable/icon_name"
-            android:drawablePadding="12dp"
-            android:ems="17"
-            android:hint="Nombre"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
-            android:textColor="#C4C4C4"/>
+        android:id="@+id/Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Login"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:drawableStart="@drawable/icon_name"
+        android:drawablePadding="12dp"
+        android:ems="17"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="#171515" />
 
     <EditText
         android:id="@+id/Password"
@@ -58,8 +58,7 @@
         android:inputType="textPassword"
         android:maxLength="16"
         android:minHeight="48dp"
-        android:textColor="#C4C4C4"
-         />
+        android:textColor="#171515" />
 
     <Button
             android:id="@+id/button_Login"
