@@ -11,7 +11,6 @@
             android:onClick="onClickCard"
             android:backgroundTint="@color/white">
         <LinearLayout
-                android:id="@+id/xd"
                 android:layout_width="240dp"
                 android:layout_height="280dp"
                 android:background="@drawable/rounded_style"
@@ -29,7 +28,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="5dp"
                     android:paddingTop="5dp"
-                    android:paddingRight="5dp">
+                    android:paddingRight="5dp" android:id="@+id/container_info">
 
                 <TextView
                         android:layout_width="wrap_content"
@@ -40,7 +39,7 @@
                         android:paddingTop="5dp"
                         android:paddingRight="5dp"
                         android:paddingBottom="5dp"
-                        android:text="@string/home_book_1_category"/>
+                        android:text="@string/home_book_1_category" android:id="@+id/bookCategory"/>
 
                 <TextView
                         android:layout_width="202dp"
@@ -58,7 +57,7 @@
                         android:layout_weight="0"
                         android:text="@string/home_book_1_description"
                         android:textColor="@color/white"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" android:id="@+id/bookSummary"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
