@@ -7,7 +7,7 @@
     android:background="@color/white"
 
 
-    tools:context=".SplashScreenBookavo">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.view.marginRight
 import androidx.fragment.app.Fragment
 import com.bookavo.pg.databinding.HomeBinding
 import com.bookavo.pg.databinding.CardDailyBinding
@@ -39,8 +40,10 @@ class Home : Fragment() {
                 val image = "@drawable/" + document.data.get("img").toString()
                 val title = document.data.get("title").toString()
                 val cardDailyBinding = CardDailyBinding.inflate(layoutInflater)
+                val cardDailyRoot = cardDailyBinding.root
                 // insert card
-                binding.linearDailyList.addView(cardDailyBinding.root)
+                binding.linearDailyList.addView(cardDailyRoot)
+//                cardDailyRoot.card
             }
         }
     }

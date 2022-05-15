@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="240dp"
         android:layout_height="280dp"
-        android:layout_marginRight="12sp"
+        android:layout_marginRight="12px"
         android:background="@color/white"
         android:backgroundTint="@color/white">
 
