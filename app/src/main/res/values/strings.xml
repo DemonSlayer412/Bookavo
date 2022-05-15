@@ -10,7 +10,9 @@
     <string name="home_book_1_name">Cosmos, una odisea en el espacio</string>
     <string name="home_book_2_name">Aguacate, no way home</string>
     <string name="home_book_1_category">Novel</string>
-    <string name="home_book_1_description">continuación de Cosmos: un viaje personal, que fuera presentada por Carl Sagan</string>
+    <string name="home_book_1_description">continuación de Cosmos: un viaje personal, que fuera presentada por Carl
+        Sagan
+    </string>
     <string name="home_book_1_title2">Recientemente leidos</string>
     <string name="home_book_1_recent">Cosmos</string>
     <string name="home_book_1_author">Neil deGrasse Tyson</string>
@@ -23,5 +25,9 @@
     <string name="profile_job">Informacion del usuario</string>
     <string name="profile_description">Firma del usuario</string>
     <string name="social_media_description">Twitter del desarrollador de la app</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>

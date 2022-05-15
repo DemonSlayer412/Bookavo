@@ -6,12 +6,6 @@
     app:startDestination="@+id/navigation_inicio">
 
     <fragment
-        android:id="@+id/navigation_inicio"
-        android:name="com.bookavo.pg.inAppUI.Home"
-        android:label="@string/title_home"
-        tools:layout="@layout/home" />
-
-    <fragment
         android:id="@+id/navigation_perfil"
         android:name="com.bookavo.pg.inAppUI.Profile"
         android:label="@string/title_me"
@@ -26,4 +20,16 @@
         android:name="com.bookavo.pg.inAppUI.Favoritos"
         android:label="@string/title_favoritos"
         tools:layout="@layout/favoritos"/>
+    <navigation android:id="@+id/navigation" app:startDestination="@id/navigation_inicio">
+        <fragment
+                android:id="@+id/navigation_inicio"
+                android:name="com.bookavo.pg.inAppUI.Home"
+                android:label="@string/title_home"
+                tools:layout="@layout/home">
+            <action android:id="@+id/action_navigation_inicio_to_bookDetails" app:destination="@id/bookDetails"
+                    app:enterAnim="@anim/nav_default_enter_anim"/>
+        </fragment>
+        <fragment android:id="@+id/bookDetails" android:name="com.bookavo.pg.inAppUI.BookDetails"
+                  android:label="book_details" tools:layout="@layout/book_details"/>
+    </navigation>
 </navigation>

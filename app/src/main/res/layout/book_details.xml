@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:orientation="vertical"
+             tools:context=".inAppUI.BookDetails">
+    <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:orientation="vertical"
+                      android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:padding="18sp"
+                          android:orientation="horizontal"
+                          android:layout_height="wrap_content" android:gravity="center_vertical">
+                <ImageView
+                        android:src="@drawable/bookavo"
+                        android:layout_width="110dp"
+                        android:layout_height="156dp" android:id="@+id/image_book" android:layout_weight="1"/>
+                <LinearLayout android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:orientation="vertical"
+                              android:layout_weight="1"
+                              android:layout_marginLeft="10dp">
+
+                    <TextView
+                            android:text="Novel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/category_book_details"
+                            android:textSize="12sp"/>
+                    <TextView
+                            android:text="Cosmos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/book_title_details"
+                            android:textSize="16sp"/>
+                    <TextView
+                            android:text="Carl Sagan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" android:id="@+id/book_author_details"
+                            android:textSize="12sp"/>
+                    <LinearLayout android:layout_width="match_parent"
+                                  android:orientation="horizontal"
+                                  android:layout_height="wrap_content">
+                        <Button
+                                android:text="Buy 255$"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:id="@+id/btn_price_details"/>
+                        <ImageButton
+                                android:src="@drawable/ic_heart"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" android:id="@+id/imageButton"
+                                android:layout_weight="1"
+                                android:contentDescription="dar like"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:padding="18dp">
+                <TextView
+                        android:text="Book summary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:textSize="22sp" android:textColor="@color/black_light" android:textStyle="bold"/>
+                <TextView
+                        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consequat vel in mauris lacus, et euismod suscipit. Sed diam fermentum convallis varius. Facilisis auctor lorem scelerisque porttitor scelerisque egestas laoreet quis. Urna ornare amet, sem lacinia lorem at justo, varius."
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" android:id="@+id/textView6" android:layout_weight="1"
+                        android:layout_marginTop="20dp"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:gravity="center_horizontal">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:layout_marginRight="18dp">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:text="4.2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:id="@+id/textView9"
+                                android:textSize="18sp"/>
+                        <ImageView
+                                android:src="@drawable/ic_star"
+                                android:layout_width="24sp"
+                                android:layout_height="wrap_content" android:id="@+id/imageView9"
+                                android:layout_weight="0" android:layout_gravity="center_vertical"/>
+                    </LinearLayout>
+                    <TextView
+                            android:text="pages"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" android:id="@+id/textView10"
+                            android:textColor="@color/black" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:layout_marginRight="18dp">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:text="4.2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:id="@+id/textView8"
+                                android:textSize="18sp"/>
+                        <ImageView
+                                android:src="@drawable/ic_star"
+                                android:layout_width="12sp"
+                                android:layout_height="wrap_content" android:id="@+id/imageView5"
+                                android:layout_weight="0" app:srcCompat="@drawable/ic_book"
+                                android:baselineAlignBottom="false" android:layout_gravity="center_vertical"/>
+                    </LinearLayout>
+                    <TextView
+                            android:text="308 reviews"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" android:id="@+id/textView7"
+                            android:textColor="@color/black" android:textSize="12sp"/>
+                </LinearLayout>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" android:layout_marginRight="18dp">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        <TextView
+                                android:text="4.2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:id="@+id/textView11"
+                                android:textSize="18sp"/>
+                        <ImageView
+                                android:src="@drawable/ic_star"
+                                android:layout_width="12sp"
+                                android:layout_height="wrap_content" android:id="@+id/imageView11"
+                                android:layout_weight="0" app:srcCompat="@drawable/ic_clock"
+                                android:layout_gravity="center_vertical"/>
+                    </LinearLayout>
+                    <TextView
+                            android:text="duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent" android:id="@+id/textView13"
+                            android:textColor="@color/black" android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:layout_marginTop="18dp" android:padding="18dp">
+                <TextView
+                        android:text="Available Chapters"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:layout_weight="1"
+                        android:textSize="22sp" android:textColor="@color/black_light" android:textStyle="bold"
+                        android:id="@+id/textView3"/>
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:layout_weight="1">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_weight="1"
+                            android:id="@+id/card_chapter" android:gravity="center_vertical">
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="312dp"
+                                android:layout_height="wrap_content" android:id="@+id/chapter_info"
+                                android:layout_marginRight="12dp">
+                            <TextView
+                                    android:text="Manusia Setengah Dewa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:id="@+id/textView12"
+                                    android:textSize="13sp"
+                                    android:textStyle="bold" android:textColor="@color/black_light"/>
+                            <TextView
+                                    android:text="3 minutes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content" android:id="@+id/textView14"/>
+                        </LinearLayout>
+                        <ImageButton
+                                android:src="@drawable/ic_play"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:id="@+id/imageButton2"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
