@@ -43,17 +43,16 @@
         android:ems="7"/>
 
 
-
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:srcCompat="@drawable/img"
-        android:layout_below="@id/book_button"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="25dp"
+            android:id="@+id/imageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            app:srcCompat="@drawable/img"
+            android:layout_below="@id/book_button"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="25dp"
 
-        />
+    />
 
     <ImageView
         android:id="@+id/imageView3"

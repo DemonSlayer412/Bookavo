@@ -7,11 +7,13 @@ import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bookavo.pg.databinding.ActivityMainBinding
+import com.bookavo.pg.inAppUI.BookDetails
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -68,6 +70,11 @@ class inApp : AppCompatActivity(){
 
 
     fun onClickCard(view: View) {
-        println("click card")
+        // nav to
+
+        val bundle = bundleOf()
+        bundle.putString("book_id", "124")
+        val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        navController.navigate(R.id.bookDetails, bundle)
     }
 }

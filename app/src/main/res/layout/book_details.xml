@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:orientation="vertical"
-             tools:context=".inAppUI.BookDetails">
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context=".inAppUI.BookDetails">
     <ScrollView android:layout_width="match_parent" android:layout_height="wrap_content">
         <LinearLayout android:layout_width="match_parent"
                       android:orientation="vertical"
                       android:layout_height="wrap_content">
 
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                <ImageButton
+                        android:src="@drawable/ic_arrow_left"
+                        android:layout_width="48dp"
+                        android:layout_height="wrap_content" android:id="@+id/back_to_home" android:layout_weight="0"
+                        android:background="@color/white" android:padding="14dp" android:contentDescription="Regresar"/>
+            </LinearLayout>
             <LinearLayout android:layout_width="match_parent"
                           android:padding="18sp"
                           android:orientation="horizontal"
@@ -49,7 +59,7 @@
                         <ImageButton
                                 android:src="@drawable/ic_heart"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent" android:id="@+id/imageButton"
+                                android:layout_height="match_parent" android:id="@+id/like_btn"
                                 android:layout_weight="1"
                                 android:contentDescription="dar like"/>
                     </LinearLayout>

@@ -48,6 +48,8 @@ class Home : Fragment() {
                 }
                 val image = document.data.get("img").toString()
                 val title = document.data.get("title").toString()
+                val id_book = document.id
+                println(id_book)
                 val cardDailyBinding = CardDailyBinding.inflate(layoutInflater)
                 val cardDailyRoot = cardDailyBinding.root
 
@@ -56,6 +58,7 @@ class Home : Fragment() {
                 cardDailyBinding.bookTitle.text = title
                 cardDailyBinding.bookSummary.text = summary
                 cardDailyBinding.containerInfo.background = loadImageFromNetwork(image)
+//                cardDailyBinding.containerInfo.bookId = document.id.toString()
 //                cardDailyBinding.containerInfo.background = context?.getDrawable(resources.getIdentifier(image, null, null))
 
                 // insert card
