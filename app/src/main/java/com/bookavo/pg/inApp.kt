@@ -67,14 +67,4 @@ class inApp : AppCompatActivity(){
             .setCancelable(false)
             .show()
     }
-
-
-    fun onClickCard(view: View) {
-        // nav to
-
-        val bundle = bundleOf()
-        bundle.putString("book_id", "124")
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        navController.navigate(R.id.bookDetails, bundle)
-    }
 }
