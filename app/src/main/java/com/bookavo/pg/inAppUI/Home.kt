@@ -66,6 +66,7 @@ class Home : Fragment() {
                 // set event
                 cardDailyBinding.cardDaily.setOnClickListener {
                     val bundle = bundleOf()
+                    //               clave,      valor
                     bundle.putString("book_id", id_book)
                     val navController = findNavController()
                     navController.navigate(R.id.bookDetails, bundle)

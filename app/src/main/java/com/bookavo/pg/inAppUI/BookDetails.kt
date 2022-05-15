@@ -13,6 +13,7 @@ import com.bookavo.pg.R
 import com.bookavo.pg.databinding.BookDetailsBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.bookavo.pg.databinding.ChapterDetailsBinding
 
 // TODO: Rename parameter arguments, choose names that match
 
@@ -35,7 +36,6 @@ class BookDetails : Fragment() {
         if(arguments?.get("book_id") != null) {
             db.collection("books").document(arguments?.get("book_id").toString()).get()
                 .addOnSuccessListener {
-                    println(it?.get("title"))
                     binding.bookTitleDetails.text = it.get("title").toString()
                     binding.bookAuthorDetails.text = it.get("author").toString()
                     binding.summaryDetails.text = it.get("summary").toString()
@@ -49,6 +49,15 @@ class BookDetails : Fragment() {
                                 binding.likeBtn.setImageResource(R.drawable.ic_heart_active)
                             }
                         }
+                    }
+                    for (caps in it.get("caps") as ArrayList<HashMap<String, String>>) {
+                        val chapterTime = caps.get("time").toString()
+                        val chaperBinding = ChapterDetailsBinding.inflate(layoutInflater)
+
+                        chaperBinding.nameChapter.text = caps.get("name").toString()
+                        println(chapterTime is String)
+                        chaperBinding.timeChapter.text = chapterTime + " minutes"
+                        binding.chapterContainer.addView(chaperBinding.root)
                     }
                 }
         }

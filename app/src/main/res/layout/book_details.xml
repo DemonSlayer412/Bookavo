@@ -175,6 +175,7 @@
                 <LinearLayout
                         android:orientation="vertical"
                         android:layout_width="match_parent"
+                        android:id="@+id/chapter_container"
                         android:layout_height="match_parent" android:layout_weight="1">
                     <LinearLayout
                             android:orientation="horizontal"
@@ -189,18 +190,18 @@
                             <TextView
                                     android:text="Manusia Setengah Dewa"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" android:id="@+id/textView12"
+                                    android:layout_height="wrap_content" android:id="@+id/name_chapter"
                                     android:textSize="13sp"
                                     android:textStyle="bold" android:textColor="@color/black_light"/>
                             <TextView
                                     android:text="3 minutes"
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content" android:id="@+id/textView14"/>
+                                    android:layout_height="wrap_content" android:id="@+id/time_chapter"/>
                         </LinearLayout>
                         <ImageButton
                                 android:src="@drawable/ic_play"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/imageButton2"
+                                android:layout_height="wrap_content" android:id="@+id/btn_play_chapter"
                         />
                     </LinearLayout>
                 </LinearLayout>
