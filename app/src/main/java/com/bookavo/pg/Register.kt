@@ -53,6 +53,7 @@ class Register : AppCompatActivity() {
                             "name" to binding.nameInput.text.toString(),
                             "username" to binding.usernameInput.text.toString(),
                             "email" to binding.mailInput.text.toString(),
+                            "signature" to "Firma no configurada"
                         )
                     ).addOnSuccessListener { documentReference ->
                         println("Se agrego a firestore")

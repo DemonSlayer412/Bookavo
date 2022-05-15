@@ -45,13 +45,21 @@ class Profile: Fragment() {
             activity?.finish()
         }
 
+        //buscar correo del usuario actual
         val correoActual = FirebaseAuth.getInstance().currentUser?.email
+        //poner su correo en el segundo campo (username)
         binding.UserName.setText(correoActual)
 
+        //buscar usuarios en la db
         db.collection("users").get().addOnSuccessListener { result ->
             for (user in result) {
+                //extraer email de usuario en iteracion
                 val category = user.data.get("email").toString()
-                println(category)
+                //si el email coincide con el del actual se ponen sus datos en pantalla
+                if(category.equals(correoActual)){
+                    binding.NombreUsuario.setText(user.data.get("name").toString())
+                    binding.firma.setText(user.data.get("signature").toString())
+                }
             }
 
         }
