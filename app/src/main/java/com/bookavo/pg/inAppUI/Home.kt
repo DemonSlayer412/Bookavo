@@ -8,7 +8,11 @@ import android.os.StrictMode.ThreadPolicy
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.bookavo.pg.R
 import com.bookavo.pg.databinding.CardDailyBinding
 import com.bookavo.pg.databinding.HomeBinding
 import com.google.firebase.firestore.FirebaseFirestore
@@ -48,7 +52,7 @@ class Home : Fragment() {
                 }
                 val image = document.data.get("img").toString()
                 val title = document.data.get("title").toString()
-                val id_book = document.id
+                val id_book = document.id.toString()
                 println(id_book)
                 val cardDailyBinding = CardDailyBinding.inflate(layoutInflater)
                 val cardDailyRoot = cardDailyBinding.root
@@ -58,8 +62,15 @@ class Home : Fragment() {
                 cardDailyBinding.bookTitle.text = title
                 cardDailyBinding.bookSummary.text = summary
                 cardDailyBinding.containerInfo.background = loadImageFromNetwork(image)
-//                cardDailyBinding.containerInfo.bookId = document.id.toString()
-//                cardDailyBinding.containerInfo.background = context?.getDrawable(resources.getIdentifier(image, null, null))
+
+                // set event
+                cardDailyBinding.cardDaily.setOnClickListener {
+                    val bundle = bundleOf()
+                    //               clave,      valor
+                    bundle.putString("book_id", id_book)
+                    val navController = findNavController()
+                    navController.navigate(R.id.bookDetails, bundle)
+                }
 
                 // insert card
                 binding.linearDailyList.addView(cardDailyRoot)
