@@ -1,9 +1,11 @@
 package com.bookavo.pg
 
+import android.content.DialogInterface
 import android.os.Bundle
 import android.view.View
 import android.view.Window
 import android.view.WindowManager
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -15,11 +17,13 @@ import androidx.navigation.ui.setupWithNavController
 import com.bookavo.pg.databinding.ActivityMainBinding
 import com.bookavo.pg.inAppUI.BookDetails
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class inApp : AppCompatActivity(){
     private lateinit var binding: ActivityMainBinding
-
+    private val db = FirebaseFirestore.getInstance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -67,4 +71,91 @@ class inApp : AppCompatActivity(){
             .setCancelable(false)
             .show()
     }
+    fun updateFragment(){
+        setContentView(R.layout.profile)
+    }
+
+    fun showAlertDialog(view: View){
+        val alert: AlertDialog.Builder = AlertDialog.Builder(this)
+        alert.setTitle("Actualizar firma")
+        alert.setMessage("Introduzca su firma nueva :")
+
+        //edit text
+        val input = EditText(this)
+        alert.setView(input)
+
+
+        alert.setPositiveButton("Guardar", DialogInterface.OnClickListener { dialog, whichButton ->
+            val value = input.text.toString()
+            changeSignature(value)
+
+            //Toast.makeText(this, value, Toast.LENGTH_SHORT).show()
+            return@OnClickListener
+        })
+
+        alert.setNegativeButton("Cancelar",
+            DialogInterface.OnClickListener { dialog, which ->
+                return@OnClickListener
+            })
+        alert.show()
+    }
+
+    fun showAlertDialog2(view: View){
+        val alert: AlertDialog.Builder = AlertDialog.Builder(this)
+        alert.setTitle("Cambio de nombre")
+        alert.setMessage("Introduzca su nuevo nombre :")
+
+        //edit text
+        val input = EditText(this)
+        alert.setView(input)
+
+
+        alert.setPositiveButton("Guardar", DialogInterface.OnClickListener { dialog, whichButton ->
+            val value = input.text.toString()
+            changeUsername(value)
+
+            //Toast.makeText(this, value, Toast.LENGTH_SHORT).show()
+            return@OnClickListener
+        })
+
+        alert.setNegativeButton("Cancelar",
+            DialogInterface.OnClickListener { dialog, which ->
+                return@OnClickListener
+            })
+        alert.show()
+    }
+
+    private fun changeSignature(firma:String){
+        //buscar correo del usuario actual
+        val correoActual = FirebaseAuth.getInstance().currentUser?.email
+        //buscar usuarios en la db
+        db.collection("users").get().addOnSuccessListener { result ->
+            for (user in result) {
+                //extraer email de usuario en iteracion
+                val category = user.data.get("email").toString()
+                val id = user.id.toString()
+                //si el email coincide con el del actual se ponen sus datos en pantalla
+                if(category.equals(correoActual)){
+                    db.collection("users").document(id).update("signature", firma)
+                }
+            }
+        }
+    }
+    private fun changeUsername(nombre:String){
+        //buscar correo del usuario actual
+        val correoActual = FirebaseAuth.getInstance().currentUser?.email
+        //buscar usuarios en la db
+        db.collection("users").get().addOnSuccessListener { result ->
+            for (user in result) {
+                //extraer email de usuario en iteracion
+                val category = user.data.get("email").toString()
+                val id = user.id.toString()
+                //si el email coincide con el del actual se ponen sus datos en pantalla
+                if(category.equals(correoActual)){
+                    db.collection("users").document(id).update("name", nombre)
+                }
+            }
+        }
+    }
+
 }
