@@ -41,4 +41,6 @@ class Descubrir : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

@@ -3,8 +3,11 @@ package com.bookavo.pg
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
@@ -24,6 +27,7 @@ class inApp : AppCompatActivity(){
         getWindow().setFlags(
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(binding.root)
         val navView: BottomNavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_activity_main)
@@ -41,4 +45,28 @@ class inApp : AppCompatActivity(){
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
     }
+
+    override fun onBackPressed() {
+
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Salir")
+            builder.setMessage("¿Desea cerrar Bookavo?")
+                .setPositiveButton(
+                    "Salir"
+                ) { dialog, which ->
+                    Toast.makeText(applicationContext, "Saliste", Toast.LENGTH_SHORT).show()
+                    finish()
+                }
+                .setNegativeButton(
+                    "Cancelar"
+                ) { dialog, which ->
+                    //Toast.makeText(applicationContext, "Cancelado", Toast.LENGTH_SHORT).show()
+                    dialog.dismiss()
+                }
+                .setCancelable(false)
+                .show()
+    }
+
+
+
 }

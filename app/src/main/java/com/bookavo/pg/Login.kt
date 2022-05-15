@@ -57,11 +57,11 @@ class Login : AppCompatActivity() {
         }
         //Abre pantalla de registro
         binding.buttonRegister.setOnClickListener {
-            Log.d("-----Funca-----","la wea 2")
             startActivity(Intent(this,Register::class.java))
 
         }
 
         supportActionBar?.hide()
     }
+
 }
