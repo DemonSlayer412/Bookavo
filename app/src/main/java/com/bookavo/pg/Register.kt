@@ -11,9 +11,11 @@ import androidx.core.util.PatternsCompat
 import com.bookavo.pg.databinding.RegisterBinding
 import java.util.regex.Pattern
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 
 class Register : AppCompatActivity() {
     private lateinit var binding: RegisterBinding
+    private val firestore = FirebaseFirestore.getInstance()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +48,18 @@ class Register : AppCompatActivity() {
                     binding.mailInput.text.toString(),
                     binding.passwordInput.text.toString()
                 ).addOnCompleteListener {
+                    firestore.collection("users").add(
+                        mapOf(
+                            "name" to binding.nameInput.text.toString(),
+                            "username" to binding.usernameInput.text.toString(),
+                            "email" to binding.mailInput.text.toString(),
+                        )
+                    ).addOnSuccessListener { documentReference ->
+                        println("Se agrego a firestore")
+                    }.addOnFailureListener { e ->
+                        println("Error adding document ${e.message.toString()}")
+                    }
+
                     if (it.isSuccessful) {
                         Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
                         startActivity(Intent(this, inApp::class.java))
@@ -70,7 +84,7 @@ class Register : AppCompatActivity() {
                     "(?=.*[A-Z])" +        //at least 1 upper case letter
                     "(?=.*[@#$%^&+=])" +    //at least 1 special character
                     "(?=\\S+$)" +           //no white spaces
-                    ".{6,}" +               //at least 4 characters
+                    ".{6,}" +               //at least 6 characters
                     "$"
         )
         //Validaciones
