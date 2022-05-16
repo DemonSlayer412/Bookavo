@@ -42,8 +42,7 @@ class Register : AppCompatActivity() {
             return
         }
         else {
-            Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
-            FirebaseAuth.getInstance()
+             FirebaseAuth.getInstance()
                 .createUserWithEmailAndPassword(
                     binding.mailInput.text.toString(),
                     binding.passwordInput.text.toString()
@@ -57,12 +56,13 @@ class Register : AppCompatActivity() {
                         )
                     ).addOnSuccessListener { documentReference ->
                         println("Se agrego a firestore")
+                        Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
                     }.addOnFailureListener { e ->
+                        Toast.makeText(this, "Correo ya en uso", Toast.LENGTH_LONG).show()
                         println("Error adding document ${e.message.toString()}")
                     }
 
                     if (it.isSuccessful) {
-                        Toast.makeText(this, "Registrado correctamente", Toast.LENGTH_LONG).show()
                         startActivity(Intent(this, inApp::class.java))
                         finish()
                     } else {

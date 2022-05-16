@@ -71,9 +71,6 @@ class inApp : AppCompatActivity(){
             .setCancelable(false)
             .show()
     }
-    fun updateFragment(){
-        setContentView(R.layout.profile)
-    }
 
     fun showAlertDialog(view: View){
         val alert: AlertDialog.Builder = AlertDialog.Builder(this)
