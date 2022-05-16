@@ -23,16 +23,16 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_marginLeft="20dp">
+
         <Button
-                android:id="@+id/book_button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/favorites_text"
-                android:backgroundTint="@color/white"
-                android:ems="7"
-                android:onClick="regresar_main"
-                android:text="Book"
-                android:textColor="@color/black"/>
+            android:id="@+id/book_button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/favorites_text"
+            android:backgroundTint="@color/white"
+            android:ems="7"
+            android:text="Book"
+            android:textColor="@color/black" />
         <Button
                 android:id="@+id/author_button2"
                 android:layout_width="wrap_content"
