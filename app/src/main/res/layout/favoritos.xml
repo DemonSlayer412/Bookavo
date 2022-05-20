@@ -8,17 +8,17 @@
               android:layout_height="match_parent">
 
     <TextView
-            android:id="@+id/favorites_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="40dp"
-            android:layout_marginEnd="20dp"
-            android:text="Favorites"
-            android:textColor="#353940"
-            android:textSize="30dp"
+        android:id="@+id/favorites_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:text="Favoritos"
+        android:textColor="#353940"
+        android:textSize="30dp"
 
-    />
+        />
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -29,19 +29,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/favorites_text"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@android:color/darker_gray"
             android:ems="7"
-            android:text="Book"
-            android:textColor="@color/black" />
+            android:text="Libros"
+            android:textColor="@color/white" />
+
         <Button
-                android:id="@+id/author_button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/favorites_text"
-                android:backgroundTint="#118A7E"
-                android:ems="7"
-                android:text="Author"
-                android:textColor="@color/black"/>
+            android:id="@+id/author_button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/favorites_text"
+            android:backgroundTint="@color/purple_500"
+            android:ems="7"
+            android:text="Autores"
+            android:textColor="@color/white" />
     </LinearLayout>
     <ScrollView
             android:layout_width="match_parent"

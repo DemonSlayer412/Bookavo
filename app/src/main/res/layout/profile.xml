@@ -10,177 +10,190 @@
     android:orientation="vertical"
     tools:context=".inAppUI.Profile">
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="171dp"
-        android:background="@color/green_light">
+        android:layout_height="match_parent">
 
-    </FrameLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-60sp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="158dp"
-            android:layout_height="158dp"
-            android:scaleType="centerCrop"
-            android:textAlignment="center"
-            app:srcCompat="@drawable/cosmos_book_image" />
-
-        <TextView
-            android:id="@+id/NombreUsuario"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="31sp"
-            android:layout_marginBottom="6sp"
-            android:text="@string/profile_author"
-            android:textAlignment="center"
-            android:textColor="@color/black_light"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/UserName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_job"
-            android:textAlignment="center"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:background="@color/green_light">
 
-    </LinearLayout>
+            </FrameLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp"
-        android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-60sp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/About"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
-            android:layout_marginBottom="10sp"
-            android:text="About"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="158dp"
+                    android:layout_height="158dp"
+                    android:scaleType="centerCrop"
+                    android:textAlignment="center"
+                    app:srcCompat="@drawable/cosmos_book_image" />
 
-        <TextView
-            android:id="@+id/firma"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_description"
-            android:textColor="@color/black_light" />
+                <TextView
+                    android:id="@+id/NombreUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="31sp"
+                    android:layout_marginBottom="6sp"
+                    android:text="@string/profile_author"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_light"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/UserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_job"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
 
+            </LinearLayout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="270dp"
-        android:layout_height="119dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20sp"
+                android:layout_marginRight="20sp"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/editar_nameTextView"
-            android:layout_width="92dp"
-            android:layout_height="42dp"
-            android:gravity="center"
-            android:text="Editar User Name"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.573"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.792" />
+                <TextView
+                    android:id="@+id/About"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30sp"
+                    android:layout_marginBottom="10sp"
+                    android:gravity="center"
+                    android:text="About"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
-        <ImageView
-            android:id="@+id/editar2"
-            android:layout_width="27dp"
-            android:layout_height="31dp"
-            android:clickable="true"
-            android:onClick="showAlertDialog2"
-            android:src="@drawable/lapiz"
-            app:layout_constraintBottom_toTopOf="@+id/editar_nameTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            app:layout_constraintStart_toEndOf="@+id/editar"
-            app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/firma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/profile_description"
+                    android:textAlignment="center"
+                    android:textColor="@color/black_light" />
 
-        <ImageView
-            android:id="@+id/editar"
-            android:layout_width="27dp"
-            android:layout_height="31dp"
-            android:clickable="true"
-            android:onClick="showAlertDialog"
-            android:src="@drawable/lapiz"
-            app:layout_constraintBottom_toTopOf="@+id/Editar_firmaTextView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.197"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/Editar_firmaTextView"
-            android:layout_width="86dp"
-            android:layout_height="26dp"
-            android:gravity="center"
-            android:text="Editar firma"
-            android:textAlignment="center"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.016"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.655" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="119dp">
 
-        <ImageView
-            android:id="@+id/boton_update"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#000000"
-            android:clickable="true"
-            android:src="@android:drawable/ic_popup_sync"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.797"
-            app:layout_constraintStart_toEndOf="@+id/editar2"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.172" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Actualizar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.769"
-            app:layout_constraintStart_toEndOf="@+id/editar_nameTextView"
-            app:layout_constraintTop_toBottomOf="@+id/boton_update"
-            app:layout_constraintVertical_bias="0.264" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="36dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
 
-    <ImageButton
-        android:id="@+id/social_twitter"
-        android:layout_width="59dp"
-        android:layout_height="57dp"
-        android:layout_marginTop="20sp"
-        android:backgroundTint="@color/white"
-        android:contentDescription="@string/social_media_description"
-        android:src="@drawable/twitter" />
+                        <ImageView
+                            android:id="@+id/editar"
+                            android:layout_width="104dp"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:onClick="showAlertDialog"
+                            android:src="@drawable/lapiz" />
 
-    <Button
-        android:id="@+id/close_session"
-        android:layout_width="163dp"
-        android:layout_height="wrap_content"
-        android:text="Cerrar Sesion" />
+                        <ImageView
+                            android:id="@+id/editar2"
+                            android:layout_width="72dp"
+                            android:layout_height="match_parent"
+                            android:clickable="true"
+                            android:onClick="showAlertDialog2"
+                            android:src="@drawable/lapiz" />
+
+                        <ImageView
+                            android:id="@+id/boton_update"
+                            android:layout_width="78dp"
+                            android:layout_height="match_parent"
+                            android:background="@color/white"
+                            android:clickable="true"
+                            android:src="@android:drawable/ic_popup_sync"
+                            app:srcCompat="@drawable/update"
+                            tools:srcCompat="@drawable/update" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="51dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/Editar_firmaTextView"
+                            android:layout_width="86dp"
+                            android:layout_height="26dp"
+                            android:gravity="center"
+                            android:text="Editar firma"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/editar_nameTextView"
+                            android:layout_width="92dp"
+                            android:layout_height="42dp"
+                            android:gravity="center"
+                            android:text="Editar User Name"
+                            android:textAlignment="center" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Actualizar" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/close_session"
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_500"
+                    android:text="Cerrar Sesion"
+                    android:textColor="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/social_twitter"
+                    android:layout_width="59dp"
+                    android:layout_height="57dp"
+                    android:layout_marginTop="20sp"
+                    android:backgroundTint="@color/white"
+                    android:contentDescription="@string/social_media_description"
+                    android:src="@drawable/twitter" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>
