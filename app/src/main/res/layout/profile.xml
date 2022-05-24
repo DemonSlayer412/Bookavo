@@ -6,23 +6,25 @@
     android:layout_height="match_parent"
     android:layout_marginTop="0dp"
     android:background="@color/white"
+    android:backgroundTint="@color/white"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     tools:context=".inAppUI.Profile">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:backgroundTint="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="171dp"
-                android:background="@color/green_light">
+                android:background="@android:color/darker_gray">
 
             </FrameLayout>
 
