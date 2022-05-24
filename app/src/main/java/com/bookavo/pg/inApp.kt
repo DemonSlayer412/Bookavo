@@ -19,6 +19,7 @@ import com.bookavo.pg.inAppUI.BookDetails
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.bookavo.pg.inAppUI.SuperHeroProvider
 
 
 class inApp : AppCompatActivity(){
@@ -154,5 +155,4 @@ class inApp : AppCompatActivity(){
             }
         }
     }
-
 }

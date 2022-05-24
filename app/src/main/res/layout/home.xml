@@ -126,7 +126,10 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
-
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleSuperHero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
             <TextView
                     android:id="@+id/new_section_title"
                     android:layout_width="match_parent"

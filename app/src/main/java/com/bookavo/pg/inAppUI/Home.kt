@@ -12,9 +12,13 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewbinding.ViewBindings
 import com.bookavo.pg.R
 import com.bookavo.pg.databinding.CardDailyBinding
 import com.bookavo.pg.databinding.HomeBinding
+import com.bookavo.pg.inAppUI.adapter.SuperHeroAdapter
 import com.google.firebase.firestore.FirebaseFirestore
 import java.io.IOException
 import java.net.URL
@@ -37,6 +41,7 @@ class Home : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initRecycleView()
         if (Build.VERSION.SDK_INT > 9) {
             val policy = ThreadPolicy.Builder().permitAll().build()
             StrictMode.setThreadPolicy(policy)
@@ -103,5 +108,11 @@ class Home : Fragment() {
             println("No es nula")
         }
         return drawable
+    }
+
+    private fun initRecycleView() {
+        val recycleView = binding.recycleSuperHero
+        recycleView.layoutManager = LinearLayoutManager(this.context)
+        recycleView.adapter = SuperHeroAdapter(SuperHeroProvider.superHeroList)
     }
 }
