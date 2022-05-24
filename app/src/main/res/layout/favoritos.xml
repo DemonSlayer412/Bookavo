@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              xmlns:tools="http://schemas.android.com/tools"
-              tools:context=".inAppUI.Favoritos"
-              android:layout_width="match_parent"
-              android:orientation="vertical"
-              android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/white"
+    android:orientation="vertical"
+    tools:context=".inAppUI.Favoritos">
 
     <TextView
         android:id="@+id/favorites_text"
@@ -19,10 +20,12 @@
         android:textSize="30dp"
 
         />
+
     <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_marginLeft="20dp">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/book_button1"
@@ -44,34 +47,55 @@
             android:text="Autores"
             android:textColor="@color/white" />
     </LinearLayout>
+
     <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="64dp"
+        android:paddingStart="12dp">
+
+        <LinearLayout
+            android:id="@+id/favorites_list"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" android:layout_marginBottom="64dp" android:paddingStart="12dp">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical" android:paddingStart="12dp" android:paddingRight="12dp"
-                      android:id="@+id/favorites_list">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="12dp"
+            android:paddingRight="12dp">
+
             <LinearLayout
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:padding="12dp" android:id="@+id/favorites_item">
+                android:id="@+id/favorites_item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
                 <ImageView
-                        android:src="@drawable/bookavo"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp" android:id="@+id/author_book_img_item" android:layout_weight="0"/>
+                    android:id="@+id/author_book_img_item"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/bookavo" />
+
                 <LinearLayout
-                        android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/author_book_name_item"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" android:layout_weight="0">
+                        android:layout_height="wrap_content"
+                        android:text="Carl Sagan"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
                     <TextView
-                            android:text="Carl Sagan"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" android:id="@+id/author_book_name_item"
-                            android:textColor="@color/black" android:textStyle="bold"/>
-                    <TextView
-                            android:text="Astronomo"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content" android:id="@+id/author_book_extra_item"
-                            android:layout_marginTop="4dp"/>
+                        android:id="@+id/author_book_extra_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Astronomo" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

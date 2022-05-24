@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
     android:background="@color/white"
+    android:backgroundTint="@color/white"
     tools:context=".inAppUI.Descubrir">
 
     <TextView
@@ -49,7 +50,7 @@
             android:layout_height="49dp"
             android:layout_gravity="clip_horizontal"
             android:layout_marginTop="92dp"
-            android:backgroundTint="#43492D"
+            android:backgroundTint="@color/purple_500"
             app:icon="?android:attr/actionModeWebSearchDrawable" />
     </LinearLayout>
 
